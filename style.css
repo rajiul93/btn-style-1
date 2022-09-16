@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.container{
+margin-top: 60px;
+text-align: center;
+
+
+}
+.button{
+margin: 10px;
+padding: 10px;
+font-size: 20px;
+border: 1px solid blueviolet;
+background-color: transparent;
+cursor: pointer;
+font-family: Arial, Helvetica, sans-serif;
+transition: .8s;
+position: relative;
+overflow: hidden;
+}
+/* button 1 & 2 css  start*/
+.button-1,.button-2{
+    color: blueviolet;
+}
+.button-1:hover,.button-2:hover{
+    color: #fff;
+}
+.button::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    width:0;
+    height:  100%;
+    background-color: blueviolet;
+    z-index: -1;
+    transition: .8s;
+}
+.button-1::before,.button-2::before{
+    left: 0;
+    border-radius: 0 50px 0 0;
+}
+.button-1:hover:before,.button-2:hover:before{
+    width: 120%;
+}
+/* button 1 & 2 css  end*/
